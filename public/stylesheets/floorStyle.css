@@ -1,0 +1,61 @@
+
+/*.parent{*/
+    /*float: left;*/
+    /*position: absolute;*/
+    /*width:80%;*/
+    /*height:80%;*/
+    /*overflow: auto;*/
+    /*z-index:0;*/
+
+
+/*}*/
+
+/*.inner{*/
+    /*position:inherit;*/
+    /*z-index:1;*/
+/*left:100%;*/
+/*top: 100%;*/
+    /*top: 5px;*/
+    /*left:5px;*/
+/*}*/
+
+/*.child*/
+/*{*/
+    /*overflow: scroll;*/
+    /*height: 100%;*/
+    /*width:50%*/
+    /*margin:0px;*/
+    /*background: url(/assets/images/FloorPlanImage.png) no-repeat center center;*/
+    /*background-size: cover;*/
+    /*background-attachment: scroll;*/
+
+/*}*/
+
+/*.parent {*/
+    /*position: relative;*/
+    /*height: 60%;*/
+    /*width: 60%;*/
+    /*background: url(/assets/images/FloorPlanImage.png) no-repeat center center;*/
+    /*background-size: cover;*/
+    /*background-attachment: scroll;*/
+/*}*/
+
+body {
+    height:600px;
+}
+.mygrid-wrapper-div {
+    position: relative;
+    top: 220px;
+    left: 20px;
+    border: solid red 1px;
+    overflow: scroll;
+    height: 70%;
+    width: 70%;
+}
+
+.camera-wrapper{
+    position: absolute;
+    bottom:10%;
+    right:50%;
+    z-index:1;
+}

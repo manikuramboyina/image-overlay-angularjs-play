@@ -1,0 +1,45 @@
+@(message: String)
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/main.css")">
+    <link rel="stylesheet" media="screen" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/floorStyle.css")">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="@routes.Assets.at("javascripts/angularjs/angular.js")"></script>
+
+    <script>
+    function OnImageLoad(evt) {
+
+    var img = evt.currentTarget;
+
+    // what's the size of this image and it's parent
+    var w = $(img).width();
+    var h = $(img).height();
+    var tw = $(img).parent().width();
+    var th = $(img).parent().height();
+
+    // compute the new size and offsets
+    var result = ScaleImage(w, h, tw, th, false);
+
+    // adjust the image coordinates and size
+    img.width = result.width;
+    img.height = result.height;
+    $(img).css("left", result.targetleft);
+    $(img).css("top", result.targettop);
+    }
+
+    </script>
+
+  </head>
+  <body>
+      <div class="mygrid-wrapper-div">
+        <canvas id="myCanvas" onload="OnImageLoad(event)"></canvas>
+          @*<img src="@routes.Assets.at("images/FloorPlanImage.png")"/>*@
+           <div class="camera-wrapper">
+             <img src="@routes.Assets.at("images/videocamera_icon.png")"/>
+        </div>
+          </div>
+  </body>
+</html>
